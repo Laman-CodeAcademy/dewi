@@ -1,0 +1,33 @@
+﻿@model List<EmployeeGetVM>
+<div>
+    <a asp-action="Create" class="btn btn-primary">create</a>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Descripton</th>
+                <th scope="col">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <th scope="row">@employee.Id</th>
+                    <th scope="row">@employee.Name</th>
+                    <th scope="row">@employee.Description</th>
+                    <th scope="row">@employee.Image</th>
+
+                    <th>
+                        <a asp-action="Update" asp-route-id="@employee.Id" class="btn btn-warning">edit</a>
+                        <a asp-action="Delete" asp-route-id="@employee.Id" class="btn btn-danger">delete</a>
+
+                    </th>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>

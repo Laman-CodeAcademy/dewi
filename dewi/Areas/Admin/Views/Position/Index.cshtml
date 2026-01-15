@@ -1,0 +1,34 @@
+﻿@model List<Position>
+<div>
+    <a asp-area="Admin"
+       asp-controller="Position"
+       asp-action="Create"
+       class="btn btn-primary">
+        Create
+    </a>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var position in Model)
+            {
+
+                <tr>
+                    <th scope="row">@position.Id</th>
+                    <td>@position.Name</td>
+
+                    <td>
+                        <a asp-action="Update" asp-area="Admin" asp-route-id="@position.Id" class="btn btn-warning">Update</a>
+                        <a asp-action="Delete" asp-area="Admin" asp-route-id="@position.Id" class="btn btn-danger">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -11,7 +11,7 @@ using dewi.Contexts;
 namespace dewi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260115143628_init")]
+    [Migration("20260115172636_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -19,7 +19,7 @@ namespace dewi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.22")
+                .HasAnnotation("ProductVersion", "8.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
