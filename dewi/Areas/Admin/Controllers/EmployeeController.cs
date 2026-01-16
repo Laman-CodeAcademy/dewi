@@ -107,7 +107,7 @@ public class EmployeeController(AppDbContext _context, IWebHostEnvironment _envi
             Name= employee.Name,
             Description= employee.Description,
             PositionId = employee.PositionId,
-            Image=employee.Image,
+            //Image=employee.Image,
         };
         await SendPositionsWithViewBag();
         return View(vm);
